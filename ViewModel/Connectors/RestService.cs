@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ViewModel
+namespace SGUI_Home_Project.ViewModel
 {
     class RestService
     {

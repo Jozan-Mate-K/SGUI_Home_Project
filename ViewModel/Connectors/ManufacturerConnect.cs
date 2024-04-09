@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ViewModel
+namespace SGUI_Home_Project.ViewModel
 {
     public class ManufacturerConnect: ConnectBase<Manufacturer>
     {
