@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="SGUI_Home_Project.Instrument.InstrumentListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SGUI_Home_Project.Instrument"
+        mc:Ignorable="d">
+    <Grid>
+        <StackPanel Margin="5"
+                    Background="DarkGoldenrod">
+            <ListView x:Name="lstView" HorizontalContentAlignment="Stretch">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="DarkBlue"
+                                BorderThickness="1"
+                                HorizontalAlignment="Stretch"><ScrollBar></ScrollBar>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="{Binding Name}" />
+                                
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</UserControl>

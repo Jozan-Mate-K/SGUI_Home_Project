@@ -9,22 +9,21 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace SGUI_Home_Project
+namespace SGUI_Home_Project.Instrument
 {
     /// <summary>
-    /// Interaction logic for ManufacturerMainWindow.xaml
+    /// Interaction logic for InstrumentListWindow.xaml
     /// </summary>
-    public partial class ManufacturerMainWindow : Window
+    public partial class InstrumentListWindow : UserControl
     {
-
-        public ManufacturerMainWindow()
+        
+        public InstrumentListWindow()
         {
             InitializeComponent();
-            
+
         }
     }
 }

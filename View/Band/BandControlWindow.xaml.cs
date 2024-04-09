@@ -9,22 +9,20 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SGUI_Home_Project
+namespace SGUI_Home_Project.Band
 {
     /// <summary>
-    /// Interaction logic for ManufacturerMainWindow.xaml
+    /// Interaction logic for BandControlWindow.xaml
     /// </summary>
-    public partial class ManufacturerMainWindow : Window
+    public partial class BandControlWindow : UserControl
     {
-
-        public ManufacturerMainWindow()
+        public BandControlWindow()
         {
             InitializeComponent();
-            
         }
     }
 }

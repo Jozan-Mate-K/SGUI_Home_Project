@@ -15,9 +15,6 @@
             <Label/>
             <Button Content="Find existing manufacturer" Command="{Binding}"/>
             <Label/>
-
-
-
         </StackPanel>
     </Grid>
 </UserControl>

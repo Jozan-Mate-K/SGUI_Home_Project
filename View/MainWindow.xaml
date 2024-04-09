@@ -16,6 +16,7 @@
             <Button Content="Bands" Click="BandButton" Width="118"/>
             <Label/>
             <Button Content="Instruments" Click="InstrumentButton" Width="118"/>
+            <Button Content="" />
         </StackPanel>
     </Grid>
 </Window>

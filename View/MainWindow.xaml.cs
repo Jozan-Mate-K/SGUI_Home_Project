@@ -41,6 +41,7 @@ namespace SGUI_Home_Project
         {
             InstrumentWindow instrumentWindow = new InstrumentWindow();
             instrumentWindow.Show();
+            
         }
     }
 }
