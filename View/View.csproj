@@ -74,6 +74,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Band\BandMainWindow.xaml.cs">
+      <DependentUpon>BandMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Instrument\InstrumentMainWindow.xaml.cs">
+      <DependentUpon>InstrumentMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturer\ManufacturerListWindow.xaml.cs">
+      <DependentUpon>ManufacturerListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturer\ManufacturerMainWindow.xaml.cs">
+      <DependentUpon>ManufacturerMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturer\ManufacturerControlWindow.xaml.cs">
+      <DependentUpon>ManufacturerControlWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Band\BandMainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Instrument\InstrumentMainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -86,6 +109,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Manufacturer\ManufacturerListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manufacturer\ManufacturerMainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manufacturer\ManufacturerControlWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -135,5 +170,6 @@
       <Name>ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

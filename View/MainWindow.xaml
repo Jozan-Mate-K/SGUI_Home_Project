@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SGUI_Home_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        d:DesignHeight="190"
+        d:DesignWidth="400"
+        FontSize="15">
     <Grid>
-        
+        <StackPanel Margin="10" Background="DarkOliveGreen">
+            <Label  Content=""/>
+            <Button Content="Manufacturers" Click="ManufacturerButton" Width="118"/>
+            <Label/>
+            <Button Content="Bands" Click="BandButton" Width="118"/>
+            <Label/>
+            <Button Content="Instruments" Click="InstrumentButton" Width="118"/>
+        </StackPanel>
     </Grid>
 </Window>

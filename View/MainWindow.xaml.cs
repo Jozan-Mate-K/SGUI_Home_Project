@@ -24,5 +24,23 @@ namespace SGUI_Home_Project
         {
             InitializeComponent();
         }
+
+        private void ManufacturerButton(object sender, RoutedEventArgs e)
+        {
+            ManufacturerMainWindow manufacturerMainWindow = new ManufacturerMainWindow();
+            manufacturerMainWindow.Show();
+        }
+
+        private void BandButton(object sender, RoutedEventArgs e)
+        {
+            BandMainWindow bandMainWindow = new BandMainWindow();
+            bandMainWindow.Show();
+        }
+
+        private void InstrumentButton(object sender, RoutedEventArgs e)
+        {
+            InstrumentWindow instrumentWindow = new InstrumentWindow();
+            instrumentWindow.Show();
+        }
     }
 }
