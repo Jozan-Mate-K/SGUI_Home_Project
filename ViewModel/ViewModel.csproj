@@ -55,11 +55,13 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BandConnect.cs" />
+    <Compile Include="Commands\GetCommand.cs" />
+    <Compile Include="Connectors\ConnectBase.cs" />
+    <Compile Include="Connectors\BandConnect.cs" />
     <Compile Include="Environment.cs" />
-    <Compile Include="IConnect.cs" />
-    <Compile Include="InstrumentConnect.cs" />
-    <Compile Include="ManufacturerConnect.cs" />
+    <Compile Include="Connectors\IConnect.cs" />
+    <Compile Include="Connectors\InstrumentConnect.cs" />
+    <Compile Include="Connectors\ManufacturerConnect.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -74,7 +76,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="RestService.cs" />
+    <Compile Include="Connectors\RestService.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -91,5 +94,6 @@
       <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
