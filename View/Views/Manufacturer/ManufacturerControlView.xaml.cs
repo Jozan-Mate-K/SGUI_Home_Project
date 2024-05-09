@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace SGUI_Home_Project
+namespace SGUI_Home_Project.Views
 {
     /// <summary>
-    /// Interaction logic for ManufacturerListWindow.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class ManufacturerListWindow : UserControl
+    public partial class ManufacturerControlView : UserControl
     {
-        public ManufacturerListWindow()
+        public ManufacturerControlView()
         {
             InitializeComponent();
         }

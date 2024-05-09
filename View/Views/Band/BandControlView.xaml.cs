@@ -10,20 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SGUI_Home_Project.Instrument
+namespace SGUI_Home_Project.Views
 {
     /// <summary>
-    /// Interaction logic for InstrumentListWindow.xaml
+    /// Interaction logic for BandControlWindow.xaml
     /// </summary>
-    public partial class InstrumentListWindow : UserControl
+    public partial class BandControlView : UserControl
     {
-        
-        public InstrumentListWindow()
+        public BandControlView()
         {
             InitializeComponent();
-
         }
     }
 }

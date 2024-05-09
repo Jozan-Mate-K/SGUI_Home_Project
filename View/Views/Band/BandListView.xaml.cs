@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SGUI_Home_Project.Band
+namespace SGUI_Home_Project.Views
 {
     /// <summary>
-    /// Interaction logic for BandControlWindow.xaml
+    /// Interaction logic for BandListWindow.xaml
     /// </summary>
-    public partial class BandControlWindow : UserControl
+    public partial class BandListView : UserControl
     {
-        public BandControlWindow()
+        public BandListView()
         {
             InitializeComponent();
         }

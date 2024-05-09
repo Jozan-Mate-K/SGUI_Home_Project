@@ -75,40 +75,41 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\GetCommand.cs" />
-    <Compile Include="ViewModels\ManufacturerViewModel.cs" />
+    <Compile Include="ViewModels\Manufacturer\ManufacturerListViewModel.cs" />
+    <Compile Include="ViewModels\Manufacturer\ManufacturerViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="Views\Band\BandControlWindow.xaml.cs">
-      <DependentUpon>BandControlWindow.xaml</DependentUpon>
+    <Compile Include="Views\Band\BandControlView.xaml.cs">
+      <DependentUpon>BandControlView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Band\BandListWindow.xaml.cs">
-      <DependentUpon>BandListWindow.xaml</DependentUpon>
+    <Compile Include="Views\Band\BandListView.xaml.cs">
+      <DependentUpon>BandListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Band\BandMainWindow.xaml.cs">
       <DependentUpon>BandMainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Instrument\InstrumentControlWindow.xaml.cs">
-      <DependentUpon>InstrumentControlWindow.xaml</DependentUpon>
+    <Compile Include="Views\Instrument\InstrumentControlView.xaml.cs">
+      <DependentUpon>InstrumentControlView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Instrument\InstrumentListWindow.xaml.cs">
-      <DependentUpon>InstrumentListWindow.xaml</DependentUpon>
+    <Compile Include="Views\Instrument\InstrumentListView.xaml.cs">
+      <DependentUpon>InstrumentListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Instrument\InstrumentMainWindow.xaml.cs">
       <DependentUpon>InstrumentMainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Manufacturer\ManufacturerListWindow.xaml.cs">
-      <DependentUpon>ManufacturerListWindow.xaml</DependentUpon>
+    <Compile Include="Views\Manufacturer\ManufacturerListView.xaml.cs">
+      <DependentUpon>ManufacturerListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Manufacturer\ManufacturerMainWindow.xaml.cs">
       <DependentUpon>ManufacturerMainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Manufacturer\ManufacturerControlWindow.xaml.cs">
-      <DependentUpon>ManufacturerControlWindow.xaml</DependentUpon>
+    <Compile Include="Views\Manufacturer\ManufacturerControlView.xaml.cs">
+      <DependentUpon>ManufacturerControlView.xaml</DependentUpon>
     </Compile>
-    <Page Include="Views\Band\BandControlWindow.xaml">
+    <Page Include="Views\Band\BandControlView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Band\BandListWindow.xaml">
+    <Page Include="Views\Band\BandListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -116,11 +117,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Instrument\InstrumentControlWindow.xaml">
+    <Page Include="Views\Instrument\InstrumentControlView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Instrument\InstrumentListWindow.xaml">
+    <Page Include="Views\Instrument\InstrumentListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -140,7 +141,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\Manufacturer\ManufacturerListWindow.xaml">
+    <Page Include="Views\Manufacturer\ManufacturerListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -148,7 +149,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Manufacturer\ManufacturerControlWindow.xaml">
+    <Page Include="Views\Manufacturer\ManufacturerControlView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace SGUI_Home_Project.Instrument
+namespace SGUI_Home_Project.Views
 {
     /// <summary>
     /// Interaction logic for InstrumentControlWindow.xaml
     /// </summary>
-    public partial class InstrumentControlWindow : UserControl
+    public partial class InstrumentControlView : UserControl
     {
-        public InstrumentControlWindow()
+        public InstrumentControlView()
         {
             InitializeComponent();
         }

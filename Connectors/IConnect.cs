@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Connectors
 {
-    internal interface IConnect<T> where T : class
+    public interface IConnect<T> where T : class
     { 
         T Get(int ID);
         List<T> GetAll();

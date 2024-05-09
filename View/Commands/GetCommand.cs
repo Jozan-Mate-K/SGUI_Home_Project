@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Connectors;
 
-namespace SGUI_Home_Project.ViewModel
+namespace SGUI_Home_Project.Commands
 {
     internal abstract class GetCommand : ICommand
     {

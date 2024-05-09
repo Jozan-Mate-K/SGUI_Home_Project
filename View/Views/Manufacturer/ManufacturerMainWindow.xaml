@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SGUI_Home_Project"
+        xmlns:views="clr-namespace:SGUI_Home_Project.Views"
         mc:Ignorable="d"
         Title="MainWindow"
         Height="450"
@@ -14,8 +15,8 @@
                 <ColumnDefinition Width="2*" />
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
-            <local:Window1 Grid.Column="0" />
-            <local:ManufacturerListWindow Grid.Column="1"/>
+            <views:ManufacturerControlView Grid.Column="0" />
+            <views:ManufacturerListView Grid.Column="1"/>
         </Grid>
     </StackPanel>
 </Window>
