@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace SGUI_Home_Project.ViewModel
+namespace SGUI_Home_Project.ViewModels
 {
     internal class ManufacturerViewModel: ViewModelBase<Manufacturer>
     {

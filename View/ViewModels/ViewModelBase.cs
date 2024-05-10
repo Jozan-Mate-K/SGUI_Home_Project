@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using Connectors;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,12 +9,13 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SGUI_Home_Project.ViewModel
+namespace SGUI_Home_Project.ViewModels
 {
-    public class ViewModelBase<T> : INotifyPropertyChanged
+    public class ViewModelBase<T> : INotifyPropertyChanged where T: class 
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        public ObservableCollection<T> Items { get; set; } = new ObservableCollection<T>();
+        protected ObservableCollection<T> Items { get; set; } = new ObservableCollection<T>();
+        protected IConnect<T> connect;
 
         public void OnPropertyChanged([CallerMemberName] string property = null)
         {

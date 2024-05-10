@@ -75,6 +75,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\GetCommand.cs" />
+    <Compile Include="ViewModels\Instrument\InstrumentListViewModel.cs" />
     <Compile Include="ViewModels\Manufacturer\ManufacturerListViewModel.cs" />
     <Compile Include="ViewModels\Manufacturer\ManufacturerViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
@@ -202,6 +203,8 @@
       <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Assets\bg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

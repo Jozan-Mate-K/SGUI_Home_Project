@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         >
     <Grid>
-        
+        <StackPanel Margin="5"
+                    Background="DarkGoldenrod">
+            <ListView x:Name="lstView" HorizontalContentAlignment="Stretch">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="DarkBlue"
+                                BorderThickness="1"
+                                HorizontalAlignment="Stretch">
+                            <StackPanel>
+                                <Label Content="{Binding Name}" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
     </Grid>
 </UserControl>

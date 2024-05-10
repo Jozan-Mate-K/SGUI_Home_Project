@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Connectors
 {
-    class RestService
+    internal class RestService: IRestService
     {
         HttpClient client;
 

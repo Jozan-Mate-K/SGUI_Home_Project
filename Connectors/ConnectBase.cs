@@ -1,16 +1,11 @@
-﻿using Models;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Connectors
 {
-    public class ConnectBase<T> : IConnect<T> where T : class
+    public abstract class ConnectBase<T> : IConnect<T> where T : class
     {
-        private RestService restService = new RestService(Environment.URL);
-        private readonly string endpoint = nameof(T);
+        protected IRestService restService;
+        protected string endpoint;
 
         public T Get(int ID)
         {

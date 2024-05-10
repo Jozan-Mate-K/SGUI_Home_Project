@@ -59,6 +59,7 @@
     <Compile Include="ConnectBase.cs" />
     <Compile Include="IConnect.cs" />
     <Compile Include="InstrumentConnect.cs" />
+    <Compile Include="IRestService.cs" />
     <Compile Include="ManufacturerConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

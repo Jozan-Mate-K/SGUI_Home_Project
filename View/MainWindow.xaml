@@ -5,18 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SGUI_Home_Project"
         mc:Ignorable="d"
-        d:DesignHeight="190"
-        d:DesignWidth="400"
+        d:DesignHeight="720"
+        d:DesignWidth="1024"
         FontSize="15">
     <Grid>
-        <StackPanel Margin="10" Background="DarkOliveGreen">
-            <Label  Content=""/>
-            <Button Content="Manufacturers" Click="ManufacturerButton" Width="118"/>
-            <Label/>
-            <Button Content="Bands" Click="BandButton" Width="118"/>
-            <Label/>
-            <Button Content="Instruments" Click="InstrumentButton" Width="118"/>
-            <Button Content="" />
-        </StackPanel>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\jozan\source\repos\SGUI_Home_Project\View\Assets\bg.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Grid Margin="10 0" Background="DarkRed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" VerticalAlignment="Center">
+                <Label Foreground="White" FontSize="45" Content="Instrument" />
+                <Label Foreground="White" FontSize="45" Content="Renting" />
+                <Label Foreground="White" FontSize="45" Content="CRM" />
+            </StackPanel>
+            <StackPanel Grid.Row="1" VerticalAlignment="Bottom">
+                <Button Content="Manufacturers" Click="ManufacturerButton" Margin="10 5"/>
+                <Button Content="Bands" Click="BandButton" Margin="10 5"/>
+                <Button Content="Instruments" Click="InstrumentButton" Margin="10 5"/>
+                
+            </StackPanel>
+
+        </Grid>
     </Grid>
 </Window>

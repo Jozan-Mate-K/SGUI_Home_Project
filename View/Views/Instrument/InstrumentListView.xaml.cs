@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SGUI_Home_Project.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +20,12 @@ namespace SGUI_Home_Project.Views
     /// </summary>
     public partial class InstrumentListView : UserControl
     {
-        
+        InstrumentListViewModel viewModel;
         public InstrumentListView()
         {
             InitializeComponent();
+            viewModel = new InstrumentListViewModel(this);
+            DataContext = viewModel;
 
         }
     }

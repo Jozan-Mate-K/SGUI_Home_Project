@@ -1,15 +1,14 @@
 ﻿using Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Connectors
 {
     public class InstrumentConnect : ConnectBase<Instrument>
     {
-
+        public InstrumentConnect()
+        {
+            this.endpoint = nameof(Instrument);
+            this.restService = new RestService(Environment.URL);
+        }
 
     }
 }

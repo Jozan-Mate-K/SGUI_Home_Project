@@ -13,8 +13,10 @@
                     <DataTemplate>
                         <Border BorderBrush="DarkBlue"
                                 BorderThickness="1"
-                                HorizontalAlignment="Stretch"><ScrollBar></ScrollBar>
-
+                                HorizontalAlignment="Stretch">
+                            <StackPanel>
+                                <Label Content="{Binding Name}" />
+                            </StackPanel>
                         </Border>
                     </DataTemplate>
                 </ListView.ItemTemplate>
