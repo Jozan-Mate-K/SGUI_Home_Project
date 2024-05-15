@@ -1,4 +1,6 @@
-﻿using SGUI_Home_Project.ViewModels;
+﻿using Models;
+using SGUI_Home_Project.Store;
+using SGUI_Home_Project.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,12 +22,18 @@ namespace SGUI_Home_Project.Views
     /// </summary>
     public partial class ManufacturerListView : UserControl
     {
-        ManufacturerListViewModel viewModel;
         public ManufacturerListView()
         {
             InitializeComponent();
-            viewModel = new ManufacturerListViewModel(this);
-            DataContext = viewModel;
+        }
+
+        private void SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(lstView.SelectedItem != null)
+            {
+                (DataContext as ManufacturerListViewModel).SelectedItemStore.SelectedItem = lstView.SelectedItem as Manufacturer;
+
+            }
         }
     }
 }

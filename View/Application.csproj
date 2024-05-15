@@ -74,10 +74,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\BaseCommand.cs" />
     <Compile Include="Commands\GetCommand.cs" />
+    <Compile Include="Commands\Manufacturer\Network\EditManufacturerCommand.cs" />
+    <Compile Include="Commands\Manufacturer\Network\AddNewManufacturerCommand.cs" />
+    <Compile Include="Commands\Manufacturer\Window\ChangeToAddNewManufacturerCommand.cs" />
+    <Compile Include="Store\ManufacturerItemsStore.cs" />
+    <Compile Include="Store\ManufacturerNavigationStore.cs" />
+    <Compile Include="Store\ManufacturerSelectedItemStore.cs" />
     <Compile Include="ViewModels\Instrument\InstrumentListViewModel.cs" />
+    <Compile Include="ViewModels\Manufacturer\ManufacturerAddNewViewModel.cs" />
     <Compile Include="ViewModels\Manufacturer\ManufacturerListViewModel.cs" />
     <Compile Include="ViewModels\Manufacturer\ManufacturerViewModel.cs" />
+    <Compile Include="ViewModels\Manufacturer\ManufacturerEditViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\Band\BandControlView.xaml.cs">
       <DependentUpon>BandControlView.xaml</DependentUpon>
@@ -97,14 +106,17 @@
     <Compile Include="Views\Instrument\InstrumentMainWindow.xaml.cs">
       <DependentUpon>InstrumentMainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Manufacturer\ManufacturerEditView.xaml.cs">
+      <DependentUpon>ManufacturerEditView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Manufacturer\ManufacturerListView.xaml.cs">
       <DependentUpon>ManufacturerListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Manufacturer\ManufacturerMainWindow.xaml.cs">
       <DependentUpon>ManufacturerMainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Manufacturer\ManufacturerControlView.xaml.cs">
-      <DependentUpon>ManufacturerControlView.xaml</DependentUpon>
+    <Compile Include="Views\Manufacturer\ManufacturerAddNewView.xaml.cs">
+      <DependentUpon>ManufacturerAddNewView.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\Band\BandControlView.xaml">
       <SubType>Designer</SubType>
@@ -142,6 +154,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Manufacturer\ManufacturerEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Manufacturer\ManufacturerListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -150,7 +166,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Manufacturer\ManufacturerControlView.xaml">
+    <Page Include="Views\Manufacturer\ManufacturerAddNewView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

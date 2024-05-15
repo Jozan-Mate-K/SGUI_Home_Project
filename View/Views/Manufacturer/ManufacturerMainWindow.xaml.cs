@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SGUI_Home_Project.Store;
+using SGUI_Home_Project.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,11 +22,14 @@ namespace SGUI_Home_Project
     /// </summary>
     public partial class ManufacturerMainWindow : Window
     {
-
+        ManufacturerViewModel viewModel;
         public ManufacturerMainWindow()
         {
             InitializeComponent();
+            viewModel = new ManufacturerViewModel(this);
+            DataContext = viewModel;
             
         }
+
     }
 }

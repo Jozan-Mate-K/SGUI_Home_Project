@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="SGUI_Home_Project.Views.ManufacturerControlView"
+﻿<UserControl x:Class="SGUI_Home_Project.Views.ManufacturerAddNewView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -9,12 +9,14 @@
              d:DesignWidth="400"
              FontSize="15">
     <Grid>
-        <StackPanel Margin="10" Background="DarkOliveGreen">
-            <Label  Content=""/>
-            <Button Content="Add new manufacturer" Command="{Binding}"/>
-            <Label/>
-            <Button Content="Find existing manufacturer" Command="{Binding}"/>
-            <Label/>
+        <StackPanel Margin="5"  Background="DarkRed">
+            <Label FontSize="20" Margin="10" Foreground="White"  Content="Name:"/>
+            <TextBox 
+                    Margin="10 0"
+                    TextChanged="changeEventHandler"
+                    x:Name="name" 
+                    Text="{Binding Name}"/>
+            <Button Margin="10 20" Content="Add new manufacturer" Click="Click" Command="{Binding AddCommand}"/>
         </StackPanel>
     </Grid>
 </UserControl>
