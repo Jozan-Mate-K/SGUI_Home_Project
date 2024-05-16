@@ -75,14 +75,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\BaseCommand.cs" />
-    <Compile Include="Commands\GetCommand.cs" />
     <Compile Include="Commands\Manufacturer\Network\DeleteManufacturerCommand.cs" />
     <Compile Include="Commands\Manufacturer\Network\EditManufacturerCommand.cs" />
     <Compile Include="Commands\Manufacturer\Network\AddNewManufacturerCommand.cs" />
     <Compile Include="Commands\Manufacturer\Window\ChangeToAddNewManufacturerCommand.cs" />
-    <Compile Include="Store\ManufacturerItemsStore.cs" />
-    <Compile Include="Store\ManufacturerNavigationStore.cs" />
-    <Compile Include="Store\ManufacturerSelectedItemStore.cs" />
+    <Compile Include="Store\Manufacturer\ManufacturerItemsStore.cs" />
+    <Compile Include="Store\Manufacturer\ManufacturerNavigationStore.cs" />
+    <Compile Include="Store\Manufacturer\ManufacturerSelectedItemStore.cs" />
     <Compile Include="ViewModels\Instrument\InstrumentListViewModel.cs" />
     <Compile Include="ViewModels\Manufacturer\ManufacturerAddNewViewModel.cs" />
     <Compile Include="ViewModels\Manufacturer\ManufacturerListViewModel.cs" />
