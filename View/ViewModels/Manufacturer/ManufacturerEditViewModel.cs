@@ -30,12 +30,13 @@ namespace SGUI_Home_Project.ViewModels
             get => connect;
         }
 
-        public ManufacturerEditViewModel(Manufacturer manufacturer, ManufacturerItemsStore itemsStore)
+        public ManufacturerEditViewModel(Manufacturer manufacturer, ManufacturerNavigationStore navigationStore, ManufacturerItemsStore itemsStore)
         {
             this.connect = new ManufacturerConnect();
             this.manufacturer = manufacturer;
             name = manufacturer.Name;
             EditCommand = new EditManufacturerCommand(this, itemsStore);
+            DeleteCommand = new DeleteManufacturerCommand(this, navigationStore, itemsStore);
         }
 
     }

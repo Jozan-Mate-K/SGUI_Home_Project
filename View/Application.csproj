@@ -76,6 +76,7 @@
     </ApplicationDefinition>
     <Compile Include="Commands\BaseCommand.cs" />
     <Compile Include="Commands\GetCommand.cs" />
+    <Compile Include="Commands\Manufacturer\Network\DeleteManufacturerCommand.cs" />
     <Compile Include="Commands\Manufacturer\Network\EditManufacturerCommand.cs" />
     <Compile Include="Commands\Manufacturer\Network\AddNewManufacturerCommand.cs" />
     <Compile Include="Commands\Manufacturer\Window\ChangeToAddNewManufacturerCommand.cs" />
@@ -106,6 +107,9 @@
     <Compile Include="Views\Instrument\InstrumentMainWindow.xaml.cs">
       <DependentUpon>InstrumentMainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Manufacturer\ManufacturerAddNewView.xaml.cs">
+      <DependentUpon>ManufacturerAddNewView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Manufacturer\ManufacturerEditView.xaml.cs">
       <DependentUpon>ManufacturerEditView.xaml</DependentUpon>
     </Compile>
@@ -114,9 +118,6 @@
     </Compile>
     <Compile Include="Views\Manufacturer\ManufacturerMainWindow.xaml.cs">
       <DependentUpon>ManufacturerMainWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Manufacturer\ManufacturerAddNewView.xaml.cs">
-      <DependentUpon>ManufacturerAddNewView.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\Band\BandControlView.xaml">
       <SubType>Designer</SubType>
@@ -154,6 +155,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Manufacturer\ManufacturerAddNewView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Manufacturer\ManufacturerEditView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -163,10 +168,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Manufacturer\ManufacturerMainWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Manufacturer\ManufacturerAddNewView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

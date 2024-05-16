@@ -31,11 +31,16 @@ namespace SGUI_Home_Project.Views
         }
         private void changeEventHandler(object sender, EventArgs args)
         {
-            if (viewModel != null)
+            if(DataContext == null)
             {
-                viewModel.Name = name.Text;
-                viewModel.OnPropertyChanged(nameof(ManufacturerEditViewModel));
+                Debug.WriteLine("No DataContext"); //Somehow this is not an issue
             }
+            if(viewModel == null)
+            {
+                viewModel = (DataContext as ManufacturerEditViewModel);
+            }
+            viewModel.Name = name.Text;
+            viewModel.OnPropertyChanged(nameof(ManufacturerEditViewModel));
         }
     }
 }

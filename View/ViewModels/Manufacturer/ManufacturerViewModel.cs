@@ -2,6 +2,7 @@
 using Models;
 using SGUI_Home_Project.Commands;
 using SGUI_Home_Project.Store;
+using SGUI_Home_Project.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -36,13 +37,12 @@ namespace SGUI_Home_Project.ViewModels
             navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
             selectedItemStore.SelectedItemChanged += OnSelectedItemChanged;
 
-            ChangeToAddNewCommand = new ChangeToAddNewManufacturerCommand(navigationStore);
+            ChangeToAddNewCommand = new ChangeToAddNewManufacturerCommand(navigationStore, itemsStore);
         }
 
         private void OnSelectedItemChanged(Manufacturer obj)
         {
-            navigationStore.CurrentView = null;
-            navigationStore.CurrentView = new ManufacturerEditViewModel(obj, itemsStore);
+            navigationStore.CurrentView = new ManufacturerEditViewModel(obj, navigationStore, itemsStore);
         }
 
         public void OnCurrentViewModelChanged()

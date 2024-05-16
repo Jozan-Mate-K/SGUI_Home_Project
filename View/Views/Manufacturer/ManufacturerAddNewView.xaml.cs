@@ -1,5 +1,4 @@
-﻿using Models;
-using SGUI_Home_Project.ViewModels;
+﻿using SGUI_Home_Project.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -13,12 +12,13 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SGUI_Home_Project.Views
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for ManufacturerAddNewView.xaml
     /// </summary>
     public partial class ManufacturerAddNewView : UserControl
     {
@@ -26,25 +26,29 @@ namespace SGUI_Home_Project.Views
         public ManufacturerAddNewView()
         {
             InitializeComponent();
-            viewModel = (DataContext as ManufacturerAddNewViewModel); //WHYYYYYYYYYYYYYYYYYYYY
-            //viewModel = new ManufacturerAddNewViewModel();
+            viewModel = (DataContext as ManufacturerAddNewViewModel); //Why isnt it possible
+            //viewModel = new ManufacturerAddNewViewModel(this);
             //DataContext = viewModel;
-            name.Text = String.Empty;
+
         }
         private void changeEventHandler(object sender, EventArgs args)
         {
-            if (viewModel != null)
+            if (DataContext == null)
             {
-                viewModel.Name = name.Text;
-                viewModel.OnPropertyChanged(nameof(ManufacturerAddNewViewModel));
+                Debug.WriteLine("No DataContext");
             }
-
+            if(viewModel == null)
+            {
+                viewModel = (DataContext as ManufacturerAddNewViewModel);
+            }
+            viewModel.Name = name.Text;
+            viewModel.OnPropertyChanged(nameof(ManufacturerAddNewViewModel));
         }
 
         private void Click(object sender, RoutedEventArgs e)
         {
 
-            name.Text = String.Empty;
+            //name.Text = String.Empty;
 
         }
     }

@@ -14,21 +14,29 @@ namespace SGUI_Home_Project.ViewModels
 {
     internal class ManufacturerAddNewViewModel: ViewModelBase<Manufacturer>
     {
-        public string Name { get; set; }
+        private string name;
+        public string Name 
+        { 
+            get => name; 
+            set => name = value; 
+        }
+
+
         public ICommand AddCommand { get; }
         public IConnect<Manufacturer> Connect { get { return connect; } }
         private readonly ManufacturerAddNewView view;
 
-        public ManufacturerAddNewViewModel()
+        public ManufacturerAddNewViewModel(ManufacturerNavigationStore navigationStore, ManufacturerItemsStore itemsStore)
         {
             Name = String.Empty;
             connect = new ManufacturerConnect();
-            AddCommand = new AddNewManufacturerCommand(this);
+            AddCommand = new AddNewManufacturerCommand(this, navigationStore, itemsStore);
         }
 
         internal void Reset()
         {
             Name = string.Empty;
+            view?.name.Clear();
         }
     }
 }

@@ -16,14 +16,14 @@
                     <DataTemplate>
                         <Border
                             Background="Transparent"
-                            BorderBrush="DarkBlue"
+                            BorderBrush="White"
                             CornerRadius="5"
                             BorderThickness="1"
                             
                             HorizontalAlignment="Stretch">
                             <DockPanel Margin="0">
-                                <Label Content="{Binding Id}" />
-                                <Label Content="{Binding Name}" />
+                                <Label Foreground="White" Content="{Binding Id}" />
+                                <Label Foreground="White" Content="{Binding Name}" />
                             </DockPanel>
                         </Border>
                     </DataTemplate>
