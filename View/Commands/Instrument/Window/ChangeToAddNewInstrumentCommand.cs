@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace SGUI_Home_Project.Commands
 {
-    internal class ChangeToAddNewManufacturerCommand: BaseCommand
+    internal class ChangeToAddNewInstrumentCommand : BaseCommand
     {
-        private readonly ManufacturerNavigationStore navigationStore;
-        private readonly ManufacturerItemsStore itemsStore;
+        private readonly InstrumentNavigationStore navigationStore;
+        private readonly InstrumentItemsStore itemsStore;
 
-        public ChangeToAddNewManufacturerCommand( ManufacturerNavigationStore navigationStore, ManufacturerItemsStore itemsStore)
+        public ChangeToAddNewInstrumentCommand(InstrumentNavigationStore navigationStore, InstrumentItemsStore itemsStore)
         {
             this.navigationStore = navigationStore;
             this.itemsStore = itemsStore;
@@ -21,7 +21,7 @@ namespace SGUI_Home_Project.Commands
 
         public override void Execute(object parameter)
         {
-            navigationStore.CurrentView = new ManufacturerAddNewViewModel(navigationStore, itemsStore);
+            navigationStore.CurrentView = new InstrumentAddNewViewModel();
         }
     }
 }

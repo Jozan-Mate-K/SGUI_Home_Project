@@ -10,31 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SGUI_Home_Project.Views
 {
     /// <summary>
-    /// Interaction logic for InstrumentControlWindow.xaml
+    /// Interaction logic for InstrumentEditView.xaml
     /// </summary>
-    public partial class InstrumentControlView : UserControl
+    public partial class InstrumentEditView : UserControl
     {
-        public InstrumentControlView()
+        public InstrumentEditView()
         {
             InitializeComponent();
-        }
-
-        private void NewInstrument(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void FindInstrument(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void IncreaseBalance(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

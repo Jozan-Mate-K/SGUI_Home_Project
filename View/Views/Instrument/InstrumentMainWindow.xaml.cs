@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SGUI_Home_Project.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +18,12 @@ namespace SGUI_Home_Project
     /// <summary>
     /// Interaction logic for InstrumentWindow.xaml
     /// </summary>
-    public partial class InstrumentWindow : Window
+    public partial class InstrumentMainWindow : Window
     {
-        public InstrumentWindow()
+        public InstrumentMainWindow()
         {
             InitializeComponent();
+            DataContext = new InstrumentViewModel(this);
         }
     }
 }

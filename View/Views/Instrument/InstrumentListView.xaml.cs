@@ -25,8 +25,6 @@ namespace SGUI_Home_Project.Views
         public InstrumentListView()
         {
             InitializeComponent();
-            viewModel = new InstrumentListViewModel(this);
-            DataContext = viewModel;
 
         }
 
@@ -34,7 +32,7 @@ namespace SGUI_Home_Project.Views
         {
             if (lstView.SelectedItem != null)
             {
-                //(DataContext as InstrumentListViewModel).SelectedItemStore.SelectedItem = lstView.SelectedItem as Manufacturer;
+                (DataContext as InstrumentListViewModel).SelectedItemStore.SelectedItem = lstView.SelectedItem as Instrument;
 
             }
         }

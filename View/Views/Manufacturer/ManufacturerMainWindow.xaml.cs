@@ -22,14 +22,10 @@ namespace SGUI_Home_Project
     /// </summary>
     public partial class ManufacturerMainWindow : Window
     {
-        ManufacturerViewModel viewModel;
         public ManufacturerMainWindow()
         {
             InitializeComponent();
-            viewModel = new ManufacturerViewModel(this);
-            DataContext = viewModel;
-            
+            DataContext = new ManufacturerViewModel(this);
         }
-
     }
 }

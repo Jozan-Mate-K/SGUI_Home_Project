@@ -75,14 +75,21 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\BaseCommand.cs" />
+    <Compile Include="Commands\Instrument\Window\ChangeToAddNewInstrumentCommand.cs" />
     <Compile Include="Commands\Manufacturer\Network\DeleteManufacturerCommand.cs" />
     <Compile Include="Commands\Manufacturer\Network\EditManufacturerCommand.cs" />
     <Compile Include="Commands\Manufacturer\Network\AddNewManufacturerCommand.cs" />
     <Compile Include="Commands\Manufacturer\Window\ChangeToAddNewManufacturerCommand.cs" />
+    <Compile Include="Store\Instrument\InstrumentItemsStore.cs" />
+    <Compile Include="Store\Instrument\InstrumentNavigationStore.cs" />
+    <Compile Include="Store\Instrument\InstrumentSelectedItemStore.cs" />
     <Compile Include="Store\Manufacturer\ManufacturerItemsStore.cs" />
     <Compile Include="Store\Manufacturer\ManufacturerNavigationStore.cs" />
     <Compile Include="Store\Manufacturer\ManufacturerSelectedItemStore.cs" />
+    <Compile Include="ViewModels\Instrument\InstrumentAddNewViewModel.cs" />
+    <Compile Include="ViewModels\Instrument\InstrumentEditViewModel.cs" />
     <Compile Include="ViewModels\Instrument\InstrumentListViewModel.cs" />
+    <Compile Include="ViewModels\Instrument\InstrumentViewModel.cs" />
     <Compile Include="ViewModels\Manufacturer\ManufacturerAddNewViewModel.cs" />
     <Compile Include="ViewModels\Manufacturer\ManufacturerListViewModel.cs" />
     <Compile Include="ViewModels\Manufacturer\ManufacturerViewModel.cs" />
@@ -97,8 +104,11 @@
     <Compile Include="Views\Band\BandMainWindow.xaml.cs">
       <DependentUpon>BandMainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Instrument\InstrumentControlView.xaml.cs">
-      <DependentUpon>InstrumentControlView.xaml</DependentUpon>
+    <Compile Include="Views\Instrument\InstrumentAddNewView.xaml.cs">
+      <DependentUpon>InstrumentAddNewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Instrument\InstrumentEditView.xaml.cs">
+      <DependentUpon>InstrumentEditView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Instrument\InstrumentListView.xaml.cs">
       <DependentUpon>InstrumentListView.xaml</DependentUpon>
@@ -130,7 +140,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Instrument\InstrumentControlView.xaml">
+    <Page Include="Views\Instrument\InstrumentAddNewView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Instrument\InstrumentEditView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -222,5 +236,6 @@
   <ItemGroup>
     <Resource Include="Assets\bg.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

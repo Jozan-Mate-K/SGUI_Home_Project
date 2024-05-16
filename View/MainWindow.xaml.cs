@@ -39,7 +39,7 @@ namespace SGUI_Home_Project
 
         private void InstrumentButton(object sender, RoutedEventArgs e)
         {
-            InstrumentWindow instrumentWindow = new InstrumentWindow();
+            InstrumentMainWindow instrumentWindow = new InstrumentMainWindow();
             instrumentWindow.Show();
             
         }

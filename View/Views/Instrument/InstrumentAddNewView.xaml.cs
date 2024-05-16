@@ -18,12 +18,12 @@ using System.Windows.Shapes;
 namespace SGUI_Home_Project.Views
 {
     /// <summary>
-    /// Interaction logic for ManufacturerAddNewView.xaml
+    /// Interaction logic for InstrumentAddNewView.xaml
     /// </summary>
-    public partial class ManufacturerAddNewView : UserControl
+    public partial class InstrumentAddNewView : UserControl
     {
-        ManufacturerAddNewViewModel viewModel;
-        public ManufacturerAddNewView()
+        InstrumentAddNewViewModel viewModel;
+        public InstrumentAddNewView()
         {
             InitializeComponent();
         }
@@ -33,13 +33,12 @@ namespace SGUI_Home_Project.Views
             {
                 Debug.WriteLine("No DataContext");
             }
-            if(viewModel == null)
+            if (viewModel == null)
             {
-                viewModel = (DataContext as ManufacturerAddNewViewModel);
+                viewModel = (DataContext as InstrumentAddNewViewModel);
             }
             viewModel.Name = name.Text;
             viewModel.OnPropertyChanged(nameof(ManufacturerAddNewViewModel));
         }
-
     }
 }
