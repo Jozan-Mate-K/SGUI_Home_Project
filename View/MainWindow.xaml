@@ -10,7 +10,7 @@
         FontSize="15">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\jozan\source\repos\SGUI_Home_Project\View\Assets\bg.png" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="\Assets\bg.png" Stretch="UniformToFill"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />

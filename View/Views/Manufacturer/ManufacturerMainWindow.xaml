@@ -13,7 +13,7 @@
     <Grid Background="Brown">
         <Grid>
             <Grid.Background>
-                <ImageBrush Opacity="0.5" ImageSource="C:\Users\jozan\source\repos\SGUI_Home_Project\View\Assets\bg.png" Stretch="UniformToFill"/>
+                <ImageBrush Opacity="0.5" ImageSource="\Assets\bg.png" Stretch="UniformToFill"/>
             </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*" />
