@@ -1,4 +1,5 @@
-﻿using SGUI_Home_Project.ViewModels;
+﻿using Models;
+using SGUI_Home_Project.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,15 @@ namespace SGUI_Home_Project.Views
             viewModel = new InstrumentListViewModel(this);
             DataContext = viewModel;
 
+        }
+
+        private void SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (lstView.SelectedItem != null)
+            {
+                //(DataContext as InstrumentListViewModel).SelectedItemStore.SelectedItem = lstView.SelectedItem as Manufacturer;
+
+            }
         }
     }
 }

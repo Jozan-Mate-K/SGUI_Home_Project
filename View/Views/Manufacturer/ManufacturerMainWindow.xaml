@@ -7,7 +7,7 @@
         xmlns:views="clr-namespace:SGUI_Home_Project.Views"
         xmlns:viewModels="clr-namespace:SGUI_Home_Project.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow"
+        Title="Manufacturers"
         Height="450"
         Width="800">
     <Grid Background="Brown">

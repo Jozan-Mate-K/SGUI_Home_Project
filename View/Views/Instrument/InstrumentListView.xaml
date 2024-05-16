@@ -6,21 +6,28 @@
         xmlns:local="clr-namespace:SGUI_Home_Project.Views"
         mc:Ignorable="d">
     <Grid>
-        <StackPanel Margin="5"
-                    Background="DarkGoldenrod">
-            <ListView x:Name="lstView" HorizontalContentAlignment="Stretch">
+        <Border 
+            Margin="5"
+            CornerRadius="15"                
+            Background="DarkGoldenrod">
+            <ListView x:Name="lstView" Padding="10" BorderThickness="0" Background="Transparent" SelectionChanged="SelectionChanged" HorizontalContentAlignment="Stretch">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Border BorderBrush="DarkBlue"
-                                BorderThickness="1"
-                                HorizontalAlignment="Stretch">
-                            <StackPanel>
-                                <Label Content="{Binding Name}" />
-                            </StackPanel>
+                        <Border
+                            Background="Transparent"
+                            BorderBrush="White"
+                            CornerRadius="5"
+                            BorderThickness="1"
+                            
+                            HorizontalAlignment="Stretch">
+                            <DockPanel Margin="0">
+                                <Label Foreground="White" Content="{Binding Manufacturer.Name}" />
+                                <Label Foreground="White" Content="{Binding Name}" />
+                            </DockPanel>
                         </Border>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackPanel>
+        </Border>
     </Grid>
 </UserControl>

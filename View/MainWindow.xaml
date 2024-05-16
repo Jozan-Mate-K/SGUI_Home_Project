@@ -28,8 +28,8 @@
             </StackPanel>
             <StackPanel Grid.Row="1" VerticalAlignment="Bottom">
                 <Button Content="Manufacturers" Click="ManufacturerButton" Margin="10 5"/>
-                <Button Content="Bands" Click="BandButton" Margin="10 5"/>
                 <Button Content="Instruments" Click="InstrumentButton" Margin="10 5"/>
+                <Button Content="Bands" Click="BandButton" Margin="10 5"/>
                 
             </StackPanel>
 
