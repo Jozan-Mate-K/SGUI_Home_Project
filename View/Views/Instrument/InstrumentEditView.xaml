@@ -84,34 +84,54 @@
                 Name="Types"
                 Content="{Binding Type}"
                 />
-            <Label 
+            <DockPanel 
                 Grid.Row="4" 
-                Grid.Column="0" 
-                FontSize="12" 
-                Margin="10" 
-                Foreground="White"  
-                Content="Manufacturer:"/>
-            <Label
-                FontSize="12" 
-                Foreground="White"
+                Grid.Column="0">
+                <Label 
+                    Grid.Row="4" 
+                    Grid.Column="0" 
+                    FontSize="12" 
+                    Margin="10" 
+                    Foreground="White"  
+                    Content="Manufacturer:"/>
+                <Label
+                    Margin="10" 
+                    FontSize="10" 
+                    Foreground="White"
+                    FontStyle="Italic"
+                    Content="{Binding CurrentManufacturerName}"/>
+
+            </DockPanel> 
+            <ComboBox
                 Grid.Row="4"
                 Grid.Column="1"
                 Margin="10"
                 Name="Manufacturers"
-                Content="{Binding Manufacturer}"
+                ItemsSource="{Binding Manufacturers}"
+                SelectedItem="{Binding Manufacturer}"
                 />
-            <Label 
+            <DockPanel                 
                 Grid.Row="5" 
-                Grid.Column="0" 
-                Margin="10" 
-                FontSize="12" 
-                Foreground="White"  
-                Content="Band:"/>
+                Grid.Column="0" >
+                <Label 
+                    Margin="10" 
+                    FontSize="12" 
+                    Foreground="White"  
+                    Content="Band:"/>
+                <Label
+                    Margin="10" 
+                    FontSize="10" 
+                    Foreground="White"
+                    FontStyle="Italic"
+                    Content="{Binding CurrentBandName}"/>
+
+            </DockPanel>
             <ComboBox
                 Grid.Row="5"
                 Grid.Column="1"
                 Margin="10"
                 Name="Bands"
+                SelectionChanged="SelectionChanged"
                 ItemsSource="{Binding Bands}"
                 SelectedItem="{Binding Band}"
                 />

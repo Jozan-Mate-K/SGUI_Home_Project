@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SGUI_Home_Project.ViewModels;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +22,22 @@ namespace SGUI_Home_Project.Views
     /// </summary>
     public partial class InstrumentEditView : UserControl
     {
+        InstrumentEditViewModel viewModel;
         public InstrumentEditView()
         {
             InitializeComponent();
+        }
+
+        private void SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(DataContext == null) 
+            {
+                Debug.WriteLine("No DataContext");
+            }
+            if(viewModel == null)
+            {
+                viewModel = (DataContext as InstrumentEditViewModel);
+            }
         }
     }
 }

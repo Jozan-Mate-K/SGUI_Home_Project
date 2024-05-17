@@ -75,6 +75,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\BaseCommand.cs" />
+    <Compile Include="Commands\Instrument\Network\DeleteInstrumentCommand.cs" />
+    <Compile Include="Commands\Instrument\Network\EditInstrumentCommand.cs" />
     <Compile Include="Commands\Instrument\Network\AddNewInstrumentCommand.cs" />
     <Compile Include="Commands\Instrument\Window\ChangeToAddNewInstrumentCommand.cs" />
     <Compile Include="Commands\Manufacturer\Network\DeleteManufacturerCommand.cs" />

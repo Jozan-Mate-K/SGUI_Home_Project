@@ -28,7 +28,7 @@
                 FontSize="15" 
                 Margin="10" 
                 Foreground="White"  
-                Content="Name:"/>
+                Content="Name*:"/>
             <TextBox 
                 Grid.Row="0" 
                 Grid.Column="1" 
@@ -86,12 +86,13 @@
                 FontSize="15" 
                 Margin="10" 
                 Foreground="White"  
-                Content="Manufacturer:"/>
+                Content="Manufacturer*:"/>
             <ComboBox 
                 Grid.Row="4"
                 Grid.Column="1"
                 Margin="10"
                 Name="Manufacturers"
+                SelectionChanged="mSelectionChanged"
                 ItemsSource="{Binding Manufacturers}"
                 SelectedItem="{Binding Manufacturer}"
                 />
