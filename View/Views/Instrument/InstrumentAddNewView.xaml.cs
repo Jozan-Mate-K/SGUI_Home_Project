@@ -1,4 +1,5 @@
-﻿using SGUI_Home_Project.ViewModels;
+﻿using Models;
+using SGUI_Home_Project.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -38,7 +39,21 @@ namespace SGUI_Home_Project.Views
                 viewModel = (DataContext as InstrumentAddNewViewModel);
             }
             viewModel.Name = name.Text;
-            viewModel.OnPropertyChanged(nameof(ManufacturerAddNewViewModel));
+            viewModel.OnPropertyChanged(nameof(InstrumentAddNewViewModel));
+        }
+
+        private void mSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (DataContext == null)
+            {
+                Debug.WriteLine("No DataContext");
+            }
+            if (viewModel == null)
+            {
+                viewModel = (DataContext as InstrumentAddNewViewModel);
+            }
+            viewModel.Manufacturer = (Manufacturers.SelectedItem as Manufacturer);
+            viewModel.OnPropertyChanged(nameof(InstrumentAddNewViewModel));
         }
     }
 }

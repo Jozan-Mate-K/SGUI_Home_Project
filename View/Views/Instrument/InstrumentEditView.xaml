@@ -6,7 +6,138 @@
              xmlns:local="clr-namespace:SGUI_Home_Project.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <Border CornerRadius="15" Margin="5"  Background="DarkRed">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Label 
+                Grid.Row="0" 
+                Grid.Column="0" 
+                FontSize="12" 
+                Margin="10" 
+                Foreground="White"  
+                Content="Name:"/>
+            <Label 
+                FontSize="12" 
+                Foreground="White"
+                Grid.Row="0" 
+                Grid.Column="1" 
+                Margin="10"
+                x:Name="name" 
+                Content="{Binding Name}"/>
+            <Label 
+                Grid.Row="1" 
+                Grid.Column="0" 
+                FontSize="12" 
+                Margin="10" 
+                Foreground="White"  
+                Content="Color:"/>
+            <Label
+                FontSize="12" 
+                Foreground="White"
+                Grid.Row="1" 
+                Grid.Column="1" 
+                Margin="10"
+                x:Name="color" 
+                Content="{Binding Color}"/>
+            <Label 
+                Grid.Row="2" 
+                Grid.Column="0" 
+                FontSize="12" 
+                Margin="10" 
+                Foreground="White"  
+                Content="Description:"/>
+            <Label
+                FontSize="12" 
+                Foreground="White"
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="10"
+                x:Name="description" 
+                Content="{Binding Description}"/>
+            <Label 
+                Grid.Row="3" 
+                Grid.Column="0" 
+                FontSize="12" 
+                Margin="10" 
+                Foreground="White"  
+                Content="Type:"/>
+            <Label
+                FontSize="12" 
+                Foreground="White"
+                Grid.Row="3"
+                Grid.Column="1"
+                Margin="10"
+                Name="Types"
+                Content="{Binding Type}"
+                />
+            <DockPanel 
+                Grid.Row="4" 
+                Grid.Column="0">
+                <Label 
+                    Grid.Row="4" 
+                    Grid.Column="0" 
+                    FontSize="12" 
+                    Margin="10" 
+                    Foreground="White"  
+                    Content="Manufacturer:"/>
+                <Label
+                    Margin="10" 
+                    FontSize="10" 
+                    Foreground="White"
+                    FontStyle="Italic"
+                    Content="{Binding CurrentManufacturerName}"/>
+
+            </DockPanel> 
+            <ComboBox
+                Grid.Row="4"
+                Grid.Column="1"
+                Margin="10"
+                Name="Manufacturers"
+                ItemsSource="{Binding Manufacturers}"
+                SelectedItem="{Binding Manufacturer}"
+                />
+            <DockPanel                 
+                Grid.Row="5" 
+                Grid.Column="0" >
+                <Label 
+                    Margin="10" 
+                    FontSize="12" 
+                    Foreground="White"  
+                    Content="Band:"/>
+                <Label
+                    Margin="10" 
+                    FontSize="10" 
+                    Foreground="White"
+                    FontStyle="Italic"
+                    Content="{Binding CurrentBandName}"/>
+
+            </DockPanel>
+            <ComboBox
+                Grid.Row="5"
+                Grid.Column="1"
+                Margin="10"
+                Name="Bands"
+                SelectionChanged="SelectionChanged"
+                ItemsSource="{Binding Bands}"
+                SelectedItem="{Binding Band}"
+                />
+
+            <Button Grid.Row="6" Grid.ColumnSpan="2" Margin="10" Content="Edit Instrument" Command="{Binding EditCommand}"/>
+            <Button Grid.Row="7" Grid.ColumnSpan="2" Margin="10" Content="Delete Instrument" Command="{Binding DeleteCommand}"/>
+        </Grid>
+    </Border>
 </UserControl>

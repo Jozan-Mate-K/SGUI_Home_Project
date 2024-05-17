@@ -77,6 +77,9 @@
     <Compile Include="Commands\Band\ChangeToAddNewBandCommand.cs" />
     <Compile Include="Commands\Band\Network\AddNewBandCommand.cs" />
     <Compile Include="Commands\BaseCommand.cs" />
+    <Compile Include="Commands\Instrument\Network\DeleteInstrumentCommand.cs" />
+    <Compile Include="Commands\Instrument\Network\EditInstrumentCommand.cs" />
+    <Compile Include="Commands\Instrument\Network\AddNewInstrumentCommand.cs" />
     <Compile Include="Commands\Instrument\Window\ChangeToAddNewInstrumentCommand.cs" />
     <Compile Include="Commands\Manufacturer\Network\DeleteManufacturerCommand.cs" />
     <Compile Include="Commands\Manufacturer\Network\EditManufacturerCommand.cs" />
