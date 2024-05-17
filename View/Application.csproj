@@ -74,7 +74,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Commands\Band\ChangeToAddNewBandCommand.cs" />
+    <Compile Include="Commands\Band\Window\ChangeToAddNewBandCommand.cs" />
     <Compile Include="Commands\Band\Network\AddNewBandCommand.cs" />
     <Compile Include="Commands\Band\Network\EditBandCommand.cs" />
     <Compile Include="Commands\BaseCommand.cs" />
