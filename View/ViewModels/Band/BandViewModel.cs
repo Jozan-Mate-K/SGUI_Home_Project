@@ -20,9 +20,9 @@ namespace SGUI_Home_Project.ViewModels
         private readonly BandNavigationStore navigationStore = new BandNavigationStore(); 
         private readonly BandSelectedItemStore selectedItemStore = new BandSelectedItemStore();
         
-        private ViewModelBase<Band> CurrentView => navigationStore.CurrentView;
+        public ViewModelBase<Band> CurrentView => navigationStore.CurrentView;
 
-        public ICommand ChangetoAddNewCommand { get; }
+        public ICommand ChangeToAddNewCommand { get; }
 
         public BandViewModel(BandMainWindow view)
         {
@@ -33,7 +33,7 @@ namespace SGUI_Home_Project.ViewModels
             navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
             selectedItemStore.SelectedItemChanged += OnSelectedItemChanged;
 
-            ChangetoAddNewCommand = new ChangeToAddNewBandCommand(navigationStore, itemStore);
+            ChangeToAddNewCommand = new ChangeToAddNewBandCommand(navigationStore, itemStore);
 
         }
 

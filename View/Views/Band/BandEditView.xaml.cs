@@ -1,7 +1,6 @@
 ﻿using SGUI_Home_Project.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -19,31 +18,31 @@ using System.Windows.Shapes;
 namespace SGUI_Home_Project.Views
 {
     /// <summary>
-    /// Interaction logic for BandAddNewView.xaml
+    /// Interaction logic for BandEditView.xaml
     /// </summary>
-    public partial class BandAddNewView : UserControl
+    public partial class BandEditView : UserControl
     {
-        BandAddNewViewModel viewModel;
-        public BandAddNewView()
+        BandEditViewModel viewModel;
+        public BandEditView()
         {
             InitializeComponent();
+            viewModel = (DataContext as BandEditViewModel);
+
         }
 
-        private void Balance_TextChanged(object sender, TextChangedEventArgs e)
+        private void name_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (DataContext == null)
             {
-                Debug.WriteLine("no datacontext");
+                Debug.WriteLine("No DataContext"); //Somehow this is not an issue
             }
             if (viewModel == null)
             {
-                viewModel = (DataContext as BandAddNewViewModel);
+                viewModel = (DataContext as BandEditViewModel);
             }
             viewModel.Name = name.Text;
             viewModel.Balance = balanceParse(Balance.Text);
-            viewModel.OnPropertyChanged(nameof(BandAddNewViewModel));
-
-
+            viewModel.OnPropertyChanged(nameof(BandEditViewModel));
         }
 
         private int? balanceParse(string input)
@@ -52,7 +51,8 @@ namespace SGUI_Home_Project.Views
             {
                 return int.Parse(input) as int?;
 
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 return null;
             }

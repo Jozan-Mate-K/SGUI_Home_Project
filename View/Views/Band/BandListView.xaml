@@ -11,7 +11,7 @@
             Margin="5"
             CornerRadius="15"                
             Background="DarkGoldenrod">
-            <ListView x:Name="lstView" Padding="10" BorderThickness="0" Background="Transparent" SelectionChanged="SelectionChanged" HorizontalContentAlignment="Stretch">
+            <ListView x:Name="lstView" Padding="10" BorderThickness="0" Background="Transparent" SelectionChanged="lstView_SelectionChanged" HorizontalContentAlignment="Stretch">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Border
