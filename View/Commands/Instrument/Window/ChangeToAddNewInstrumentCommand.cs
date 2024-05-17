@@ -21,7 +21,7 @@ namespace SGUI_Home_Project.Commands
 
         public override void Execute(object parameter)
         {
-            navigationStore.CurrentView = new InstrumentAddNewViewModel();
+            navigationStore.CurrentView = new InstrumentAddNewViewModel(navigationStore, itemsStore);
         }
     }
 }

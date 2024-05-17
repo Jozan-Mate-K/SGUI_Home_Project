@@ -34,7 +34,7 @@ namespace SGUI_Home_Project.ViewModels
 
         private void OnSelectedItemChanged(Instrument instrument)
         {
-            navigationStore.CurrentView = new InstrumentEditViewModel();
+            navigationStore.CurrentView = new InstrumentEditViewModel(instrument, navigationStore, itemsStore);
         }
 
         private void OnCurrentViewModelChanged()
