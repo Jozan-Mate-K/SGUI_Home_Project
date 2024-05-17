@@ -1,5 +1,6 @@
 ﻿using Connectors;
 using Models;
+using SGUI_Home_Project.Commands;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +36,7 @@ namespace SGUI_Home_Project.ViewModels
 
         public IConnect<Band> Connect
         {
-            get => Connect;
+            get => connect;
         }
 
         public BandEditViewModel(Band band, BandNavigationStore navigationStore, BandItemsStore itemsStore)
@@ -44,7 +45,8 @@ namespace SGUI_Home_Project.ViewModels
             this.Band = band;
             name = band.Name;
             balance = band.Balance;
-            
+            EditCommand = new EditBandCommand(this, itemsStore);
+            DeleteCommand = new DeleteBandCommand(itemsStore, navigationStore, this);
         }
 
 

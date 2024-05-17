@@ -14,12 +14,16 @@
                     <Label FontSize="20" Margin="10" Foreground="White" Content="ID:" />
                     <Label FontSize="20" Margin="10" Foreground="White" Content="{ Binding ID}" />
                 </DockPanel>
-                <Label FontSize="20" Margin="10" Foreground="White"  Content="Name:"/>
-                <TextBox 
+                <DockPanel>
+                    <Label FontSize="20" Margin="10" Foreground="White"  Content="Name:"/>
+                    <Label FontSize="20" Margin="10" Foreground="White"  Content="{Binding Name}"/>
+                    
+                </DockPanel>
+                <!--<TextBox 
                         Margin="10 0"
                         TextChanged="name_TextChanged"
                         x:Name="name" 
-                        Text="{Binding Name, Mode=TwoWay}"/>
+                        Text="{Binding Name, Mode=TwoWay}"/>-->
                 <Label FontSize="20" Margin="10" Foreground="White"  Content="Balance:"/>
                 <TextBox 
                         Margin="10 0"

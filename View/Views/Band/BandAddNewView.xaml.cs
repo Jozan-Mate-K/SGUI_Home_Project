@@ -52,9 +52,20 @@ namespace SGUI_Home_Project.Views
             {
                 return int.Parse(input) as int?;
 
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
-                return null;
+                if (Balance.Text.Length > 1)
+                {
+                    Balance.Text = Balance.Text.Remove(Balance.Text.Length - 1);
+                    Balance.CaretIndex = Balance.Text.Length;
+                    return int.Parse(Balance.Text);
+                }
+                else
+                {
+                    Balance.Text = String.Empty;
+                    return null;
+                }
             }
         }
     }

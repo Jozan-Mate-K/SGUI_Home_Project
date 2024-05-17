@@ -44,7 +44,7 @@ namespace SGUI_Home_Project.Commands
 
         public override void Execute(object parameter)
         {
-            viewModel.Connect.Post(new Band() { Name = viewModel.Name });
+            viewModel.Connect.Post(new Band() { Name = viewModel.Name, Balance = viewModel.Balance });
             itemsStore.Bands = new ObservableCollection<Band>(viewModel.Connect.GetAll());
             navigationStore.CurrentView = new BandEditViewModel(
                 itemsStore.Bands.Single(x => x.Name == viewModel.Name),

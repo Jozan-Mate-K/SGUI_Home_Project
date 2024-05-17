@@ -40,13 +40,14 @@ namespace SGUI_Home_Project.Views
             {
                 viewModel = (DataContext as BandEditViewModel);
             }
-            viewModel.Name = name.Text;
+            //viewModel.Name = name.Text;
             viewModel.Balance = balanceParse(Balance.Text);
             viewModel.OnPropertyChanged(nameof(BandEditViewModel));
         }
 
         private int? balanceParse(string input)
         {
+            
             try
             {
                 return int.Parse(input) as int?;
@@ -54,7 +55,17 @@ namespace SGUI_Home_Project.Views
             }
             catch (Exception e)
             {
-                return null;
+                if(Balance.Text.Length > 1)
+                {
+                    Balance.Text = Balance.Text.Remove(Balance.Text.Length -1);
+                    Balance.CaretIndex = Balance.Text.Length;
+                    return int.Parse(Balance.Text);
+                }
+                else
+                {
+                    Balance.Text = String.Empty;
+                    return null;
+                }
             }
         }
     }
