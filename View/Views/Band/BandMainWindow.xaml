@@ -1,12 +1,41 @@
-﻿<Window x:Class="SGUI_Home_Project.BandMainWindow"
+﻿<Window x:Class="SGUI_Home_Project.Views.BandMainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SGUI_Home_Project"
+        xmlns:views="clr-namespace:SGUI_Home_Project.Views"
+        xmlns:viewModels="clr-namespace:SGUI_Home_Project.ViewModels"
         mc:Ignorable="d"
-        Title="BandMainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Bands" Height="450" Width="800">
 
+    <Grid Background="Brown">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush Opacity="0.5" ImageSource="\Assets\bg.png" Stretch="UniformToFill"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <ContentControl x:Name="Control" Grid.Column="0" Content="{Binding CurrentView}">
+                <ContentControl.Resources>
+                    <DataTemplate DataType="{x:Type viewModels:BandEditViewModel}">
+                        <views:ManufacturerEditView x:Name="editView"/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type viewModels:BandAddNewViewModel}">
+                        <views:ManufacturerAddNewView x:Name="addView" />
+                    </DataTemplate>
+                </ContentControl.Resources>
+            </ContentControl>
+            <views:BandListView x:Name="listView" Grid.Column="1"/>
+            <Button Grid.Row="1" Grid.Column="1" FontSize="20" Margin="5" Padding="0" Content="+"  Command="{Binding ChangeToAddNewCommand}"></Button>
+        </Grid>
     </Grid>
+
+
 </Window>

@@ -35,7 +35,7 @@ namespace SGUI_Home_Project.ViewModels
 
         internal void Reset()
         {
-            Name = string.Empty;
+            Name = String.Empty;
             view.name.Clear();
         }
     }

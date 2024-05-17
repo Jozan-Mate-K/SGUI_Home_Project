@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Models;
+using SGUI_Home_Project.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +26,15 @@ namespace SGUI_Home_Project.Views
         {
             InitializeComponent();
         }
+
+
+        private void SelectionChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+            if (lstView.SelectedItem != null)
+            {
+                (DataContext as BandListViewModel).SelectedItemStore.SelectedItem = lstView.SelectedItem as Band;
+            }
+        }
+
     }
 }

@@ -74,18 +74,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\Band\ChangeToAddNewBandCommand.cs" />
+    <Compile Include="Commands\Band\Network\AddNewBandCommand.cs" />
     <Compile Include="Commands\BaseCommand.cs" />
     <Compile Include="Commands\Instrument\Window\ChangeToAddNewInstrumentCommand.cs" />
     <Compile Include="Commands\Manufacturer\Network\DeleteManufacturerCommand.cs" />
     <Compile Include="Commands\Manufacturer\Network\EditManufacturerCommand.cs" />
     <Compile Include="Commands\Manufacturer\Network\AddNewManufacturerCommand.cs" />
     <Compile Include="Commands\Manufacturer\Window\ChangeToAddNewManufacturerCommand.cs" />
+    <Compile Include="Store\Band\BandNavigationStore.cs" />
+    <Compile Include="Store\Band\BandItemsStore.cs" />
+    <Compile Include="Store\Band\BandSelectedItemStore.cs" />
     <Compile Include="Store\Instrument\InstrumentItemsStore.cs" />
     <Compile Include="Store\Instrument\InstrumentNavigationStore.cs" />
     <Compile Include="Store\Instrument\InstrumentSelectedItemStore.cs" />
     <Compile Include="Store\Manufacturer\ManufacturerItemsStore.cs" />
     <Compile Include="Store\Manufacturer\ManufacturerNavigationStore.cs" />
     <Compile Include="Store\Manufacturer\ManufacturerSelectedItemStore.cs" />
+    <Compile Include="ViewModels\Band\BandAddNewViewModel.cs" />
+    <Compile Include="ViewModels\Band\BandEditViewModel.cs" />
+    <Compile Include="ViewModels\Band\BandListViewModel.cs" />
+    <Compile Include="ViewModels\Band\BandViewModel.cs" />
     <Compile Include="ViewModels\Instrument\InstrumentAddNewViewModel.cs" />
     <Compile Include="ViewModels\Instrument\InstrumentEditViewModel.cs" />
     <Compile Include="ViewModels\Instrument\InstrumentListViewModel.cs" />
@@ -95,6 +104,9 @@
     <Compile Include="ViewModels\Manufacturer\ManufacturerViewModel.cs" />
     <Compile Include="ViewModels\Manufacturer\ManufacturerEditViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\Band\BandAddNewView.xaml.cs">
+      <DependentUpon>BandAddNewView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Band\BandControlView.xaml.cs">
       <DependentUpon>BandControlView.xaml</DependentUpon>
     </Compile>
@@ -128,6 +140,10 @@
     <Compile Include="Views\Manufacturer\ManufacturerMainWindow.xaml.cs">
       <DependentUpon>ManufacturerMainWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\Band\BandAddNewView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Band\BandControlView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
