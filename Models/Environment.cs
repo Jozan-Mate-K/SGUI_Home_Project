@@ -9,6 +9,6 @@ namespace Models
 {
     public static class Environment
     {
-        public static string URL = "http://25.17.156.158:5030";
+        public static string URL = "http://localhost:5030";
     }
 }
